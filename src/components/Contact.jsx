@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect, forwardRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { gsap } from 'gsap';
 
-const Contact = forwardRef((props, ref) => {
+const Contact = forwardRef((_props, ref) => {
   const form = useRef();
   const [popupMessage, setPopupMessage] = useState('');
   const [popupType, setPopupType] = useState(''); // 'success' ou 'error'
