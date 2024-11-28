@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from "motion/react"
 
-const Card = ({ title, description, imageUrl, delay }) => {
+const Card = ({ title, description="", imageUrl="", delay="" }) => {
     return (
         <motion.div
             className="text-gray-700 m-auto py-12 border-t-[1px] border-black card grid grid-cols-1 sm:grid-cols-3 gap-y-8"
@@ -61,4 +61,4 @@ const CardList = () => {
     );
 };
 
-export default CardList;
+export default Card;

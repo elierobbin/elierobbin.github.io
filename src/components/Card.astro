@@ -1,0 +1,13 @@
+---
+const {miniature, title, description, url} = Astro.props
+---
+
+
+    <a href={url}>
+
+        <section>
+            <img src={miniature} alt="cover du projet">
+            <h1 class="text-red-400">{title}</h1>
+            <p>{description}</p>
+        </section>
+    </a>

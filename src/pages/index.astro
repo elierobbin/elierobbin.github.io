@@ -1,7 +1,12 @@
 ---
 import "../components/index.css";
-import Card from "../components/Card";
+import Card from "../components/Card.astro";
 import Contact from "../components/Contact";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 2);
 ---
 
 <!doctype html>
@@ -9,7 +14,7 @@ import Contact from "../components/Contact";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio | Elie ROBIN</title>
   </head>
   <body>
     <header
@@ -30,15 +35,24 @@ import Contact from "../components/Contact";
       </div>
     </header>
 
-	<Card client:load></Card>
-	
-	<Contact></Contact>
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <Card
+              url={`/blog/${post.slug}/`}
+              miniature={post.data.miniature}
+              title={post.data.title}
+              description={post.data.description}
+            />
+          </li>
+        ))
+      }
+    </ul>
+    <Contact />
 
-	<footer class='flex bg-transparent justify-center items-center'>
-		<p class='text-gray-700 text-sm'>&copy; 2024 - Elie ROBIN</p>
-	</footer>
-
-
+    <footer class="flex bg-transparent justify-center items-center">
+      <p class="text-gray-700 text-sm">&copy; 2024 - Elie ROBIN</p>
+    </footer>
   </body>
-
 </html>
