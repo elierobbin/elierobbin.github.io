@@ -1,31 +1,22 @@
 ---
-import "../components/index.css";
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
 import Card from "../components/Card.astro";
-import Contact from "../components/Contact";
 import { getCollection } from "astro:content";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const posts = (await getCollection("blog"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 2);
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Elie ROBIN</title>
-  </head>
-  <body>
-    <Header></Header>
-    <header
+<BaseLayout>
+
+    <section
       class="flex flex-col m-auto justify-center items-left gap-32 h-screen"
     >
       <div class="flex flex-col gap-5">
         <h2 class="text-2xl w-full text-left text-gray-700">I'm Elie !</h2>
-        <h1 class="text-6xl text-gray-700">
+        <h1 class="anim text-6xl text-gray-700">
           Concevoir des
           <span class="italic text-green-900">interfaces digitales</span>
           centrées sur le visuel.
@@ -36,7 +27,7 @@ const posts = (await getCollection("blog"))
           Échanger avec moi !
         </button>
       </div>
-    </header>
+    </section>
 
     <ul>
       {
@@ -53,8 +44,7 @@ const posts = (await getCollection("blog"))
         ))
       }
     </ul>
-    <Contact />
 
-    <Footer />
-  </body>
-</html>
+</BaseLayout>
+
+
