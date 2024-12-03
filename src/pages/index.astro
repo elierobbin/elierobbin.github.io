@@ -1,5 +1,7 @@
 ---
 import "../components/index.css";
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 import Card from "../components/Card.astro";
 import Contact from "../components/Contact";
 import { getCollection } from "astro:content";
@@ -17,6 +19,7 @@ const posts = (await getCollection("blog"))
     <title>Portfolio | Elie ROBIN</title>
   </head>
   <body>
+    <Header></Header>
     <header
       class="flex flex-col m-auto justify-center items-left gap-32 h-screen"
     >
@@ -41,9 +44,10 @@ const posts = (await getCollection("blog"))
           <li>
             <Card
               url={`/blog/${post.slug}/`}
-              miniature={post.data.miniature}
+              image={post.data.heroImage}
               title={post.data.title}
               description={post.data.description}
+              logiciel={post.data.logiciel}
             />
           </li>
         ))
@@ -51,8 +55,6 @@ const posts = (await getCollection("blog"))
     </ul>
     <Contact />
 
-    <footer class="flex bg-transparent justify-center items-center">
-      <p class="text-gray-700 text-sm">&copy; 2024 - Elie ROBIN</p>
-    </footer>
+    <Footer />
   </body>
 </html>

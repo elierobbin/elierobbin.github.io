@@ -1,13 +1,16 @@
 ---
-const {miniature, title, description, url} = Astro.props
+const { image, title, description, logiciel, url } = Astro.props;
 ---
 
-
-    <a href={url}>
-
-        <section>
-            <img src={miniature} alt="cover du projet">
-            <h1 class="text-red-400">{title}</h1>
-            <p>{description}</p>
-        </section>
-    </a>
+<a href={url}>
+  <section
+    class="flex flex-col gap-4 sm:flex-row justify-between w-[90%] sm:w-[100%] py-16 border-b border-black"
+  >
+    <img src={image} class="w-full sm:w-96" alt="cover du projet" />
+    <div class="flex sm:pl-8 w-full gap-6 justify-between">
+      <h1 class="text-2xl">{title}</h1>
+      <p class="font-sans text-black font-light text-lg">{description}</p>
+      <p class="font-sans text-black font-light text-lg">{logiciel}</p>
+    </div>
+  </section>
+</a>
