@@ -2,11 +2,15 @@
 const { image, title, description, logiciel, url } = Astro.props;
 ---
 
-<a href={url}>
+<a href={url} class="group">
   <section
     class="flex flex-col gap-4 md:flex-row justify-between w-full md:w-[100%] py-16 border-b border-black"
   >
-    <img src={image} class="w-full md:w-96 aspect-video" alt="cover du projet" />
+    <img
+      src={image}
+      class="w-full md:w-96 aspect-video transition-all duration-300 ease-in-out group-hover:rounded-xl"
+      alt="cover du projet"
+    />
     <div class="flex flex-col md:flex-row md:pl-8 w-full gap-6 justify-between">
       <h1 class="text-2xl">{title}</h1>
       <p class="font-sans text-black font-light text-lg">{description}</p>
