@@ -4,10 +4,10 @@ const { image, title, description, logiciel, url } = Astro.props;
 
 <a href={url}>
   <section
-    class="flex flex-col gap-4 sm:flex-row justify-between w-[90%] sm:w-[100%] py-16 border-b border-black"
+    class="flex flex-col gap-4 md:flex-row justify-between w-full md:w-[100%] py-16 border-b border-black"
   >
-    <img src={image} class="w-full sm:w-96" alt="cover du projet" />
-    <div class="flex sm:pl-8 w-full gap-6 justify-between">
+    <img src={image} class="w-full md:w-96 aspect-video" alt="cover du projet" />
+    <div class="flex flex-col md:flex-row md:pl-8 w-full gap-6 justify-between">
       <h1 class="text-2xl">{title}</h1>
       <p class="font-sans text-black font-light text-lg">{description}</p>
       <p class="font-sans text-black font-light text-lg">{logiciel}</p>

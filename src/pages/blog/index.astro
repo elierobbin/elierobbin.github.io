@@ -11,7 +11,7 @@ const posts = (await getCollection("blog")).sort(
 <BaseLayout>
 
 <main>
-  <ul class="flex flex-col gap-4">
+  <ul class="flex flex-col gap-4 sm:mx-auto">
     {
       posts.map((post) => (
         <li>
