@@ -1,9 +1,14 @@
 ---
-title: 'Webdesign & Intégration'
+title: 'Landing page pour un vigneron'
 description: "Dans ce projet fictif, j'ai conçu et intégré une landing page dédiée à la mise en valeur d'un domaine viticole situé à Bordeaux."
-logiciel: 'Figma, HTML, Tailwind CSS, Javascript'
+logiciel: 'Figma HTML Tailwind CSS Javascript'
 pubDate: 'Nov 30 2024'
-heroImage: '/header.jpg'
+heroImage:
+  - '/header2.jpg'
+  - '/header.jpg'
+  - '/header.jpg'
+  - '/header2.jpg'
+  - '/header.jpg'
 
 ---
 
