@@ -12,7 +12,7 @@ const { title, description, heroImage } = Astro.props;
     <article class="flex flex-col items-start gap-4">
       <h1>{title}</h1>
       <p>{description}</p>
-      <img src={heroImage} alt="Photo du projet"/>
+      <img 'src={heroImage}' alt="Photo du projet"/>
 
       <div class="prose">
         <slot />
