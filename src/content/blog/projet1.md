@@ -11,3 +11,5 @@ heroImage: '/assets/projet1/header2.jpg'
 
 Ce projet fictif a pour objectif de mettre en valeur un domaine viticole bordelais à travers une **landing page moderne, élégante et immersive**. En m'appuyant sur une approche orientée expérience utilisateur (UX/UI), j'ai imaginé un design qui reflète l'identité haut de gamme et la tradition du vignoble tout en proposant une expérience fluide pour les visiteurs du site.
 
+Ce projet fictif a pour objectif de mettre en valeur un domaine viticole bordelais à travers une **landing page moderne, élégante et immersive**. En m'appuyant sur une approche orientée expérience utilisateur (UX/UI), j'ai imaginé un design qui reflète l'identité haut de gamme et la tradition du vignoble tout en proposant une expérience fluide pour les visiteurs du site.
+
