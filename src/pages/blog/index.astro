@@ -3,29 +3,38 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import Card from "../../components/Card.astro";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const posts = await getCollection("blog");
+
+const tags = [...new Set(posts.map((post: any) => post.data.tags).flat())];
 ---
 
 <BaseLayout>
-
-<main>
-  <ul class="flex flex-col gap-4 sm:mx-auto">
-    {
-      posts.map((post) => (
-        <li>
-          <Card
-            url={`/blog/${post.slug}/`}
-            image={post.data.heroImage}
-            title={post.data.title}
-            description={post.data.description}
-            logiciel={post.data.logiciel}
-          />
-        </li>
-      ))
-    }
-  </ul>
-</main>
-
-</BaseLayout>	
+  <main>
+    <section class="flex gap-4">
+      {
+        tags.map((tag: string) => (
+          <li class="list-none">
+            <a
+              class="border border-black border-1 px-4 py-2 hover:bg-black hover:text-white transition-all ease-in-out duration-200"
+              href={`/blog/tags/${tag}`}
+            >
+              {tag}
+            </a>
+          </li>
+        ))
+      }
+    </section>
+  </main>
+  {
+    posts.map((post) => (
+      <li class="list-none">
+        <Card
+          url={`/blog/${post.slug}/`}
+          image={post.data.heroImage}
+          title={post.data.title}
+          description={post.data.description}
+        />
+      </li>
+    ))
+  }
+</BaseLayout>

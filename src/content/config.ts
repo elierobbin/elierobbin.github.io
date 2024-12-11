@@ -5,9 +5,9 @@ export const collections = {
     schema: z.object({
       title: z.string(),
       description: z.string(),
-      logiciel: z.string(),
       pubDate: z.string(),
-      heroImage: z.union([z.string(), z.array(z.string())]), // Accepte une chaîne ou un tableau
+      heroImage: z.union([z.string(), z.array(z.string())]),
+      tags: z.array(z.string()), //Array permet de stocker plusieurs valeurs
     }),
   }),
 };

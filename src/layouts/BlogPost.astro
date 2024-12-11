@@ -4,137 +4,20 @@ import BaseLayout from "./BaseLayout.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, logiciel, pubDate, heroImage } = Astro.props;
+const { title, description, pubDate, heroImage } = Astro.props;
 ---
 
 <BaseLayout>
   <main>
     <article class="flex flex-col items-start gap-4">
       <h1>{title}</h1>
+      <p>{description}</p>
+      <img src={heroImage} alt="Photo du projet"/>
 
-      {
-        Array.isArray(heroImage) && (
-          <div class="carousel">
-            <div class="carousel-container">
-              <div class="carousel-track">
-                {heroImage.map((image, index) => (
-                  <div key={index} class="carousel-item">
-                    <img
-                      src={image}
-                      alt={`Image ${index + 1}`}
-                      class="carousel-image"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div class="carousel-buttons">
-              <button class="prev"><img src="/public/icons/gauche.svg" alt="gauche"></button>
-              <button class="next"><img src="/public/icons/droite.svg" alt="droite"></button>
-            </div>
-          </div>
-        )
-      }
-
-      <p>{logiciel}</p>
       <div class="prose">
         <slot />
       </div>
     </article>
   </main>
 
-  <style>
-    .carousel {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      height: 85vh;
-    }
-
-    .carousel-container {
-      display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-    }
-
-    .carousel-track {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .carousel-item {
-      flex-shrink: 0;
-      width: 100%;
-      height: auto;
-    }
-
-    .carousel-image {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 0.5rem;
-    }
-
-    .carousel-buttons {
-      position: absolute;
-      top: 50%;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      z-index: 10;
-    }
-
-    .prev,
-    .next {
-      border: none;
-      width: 3rem;
-      border-radius: 10rem;
-      cursor: pointer;
-      transform: translateY(-50%);
-    }
-
-    .prev {
-      margin-left: 1rem;
-    }
-
-    .next {
-      margin-right: 1rem;
-    }
-
-    /* Style pour les boutons et l'effet de défilement */
-    .carousel-container::-webkit-scrollbar {
-      display: none;
-    }
-
-    /* Gestion du défilement avec les boutons */
-    .carousel-container {
-      scroll-snap-type: x mandatory;
-    }
-
-    .carousel-item {
-      scroll-snap-align: center;
-    }
-  </style>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const prevButton = document.querySelector(".prev");
-      const nextButton = document.querySelector(".next");
-      const carouselContainer = document.querySelector(".carousel-container");
-
-      nextButton.addEventListener("click", () => {
-        carouselContainer.scrollBy({
-          left: window.innerWidth, // Ajuste la distance de défilement
-          behavior: "smooth",
-        });
-      });
-
-      prevButton.addEventListener("click", () => {
-        carouselContainer.scrollBy({
-          left: -window.innerWidth, // Ajuste la distance de défilement
-          behavior: "smooth",
-        });
-      });
-    });
-  </script>
 </BaseLayout>

@@ -15,10 +15,81 @@ import { LOGO_PATH } from "../consts";
       <HeaderLink href="/blog" class="text-gray-700 hover:text-gray-700 text-lg"
         >Projets</HeaderLink
       >
-      <HeaderLink
-        href="/about"
-        class="text-gray-700 hover:text-gray-700 text-lg">Contact</HeaderLink
+      <button>
+        <a href="#contact">Contact</a>
+      </button>
+      
+      <section
+        id="contact"
+        class="items-center justify-center w-screen h-screen bg-black-50 fixed top-0 left-0 hidden opacity-0 transition-opacity duration-300"
       >
+        <div class="flex flex-col gap-6 p-12 rounded-lg bg-white max-w-md mx-auto">
+          <section class="w-full flex justify-between items-center">
+            <h2 class="text-2xl font-bold">Contact</h2>
+            <a href="#" class="text-gray-500 hover:text-black text-xl font-bold"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="24" height="24"><path d="m15.854,8.854l-3.146,3.146,3.146,3.146c.195.195.195.512,0,.707-.098.098-.226.146-.354.146s-.256-.049-.354-.146l-3.146-3.146-3.146,3.146c-.098.098-.226.146-.354.146s-.256-.049-.354-.146c-.195-.195-.195-.512,0-.707l3.146-3.146-3.146-3.146c-.195-.195-.195-.512,0-.707s.512-.195.707,0l3.146,3.146,3.146-3.146c.195-.195.512-.195.707,0s.195.512,0,.707Zm8.146,3.146c0,6.617-5.383,12-12,12S0,18.617,0,12,5.383,0,12,0s12,5.383,12,12Zm-1,0c0-6.065-4.935-11-11-11S1,5.935,1,12s4.935,11,11,11,11-4.935,11-11Z"/></svg>
+            </a>
+          </section>
+          <p class="text-gray-700 font-sans">
+            Vous avez une question, une suggestion ou une demande de devis ?
+            N'hésitez pas à me contacter !
+          </p>
+          <ul class="flex gap-2">
+            <li class="w-1/2 rounded-md border border-gray-200">
+              <a
+                class="group flex flex-col gap-3 items-center py-8 px-4 rounded-md border-1 hover:bg-gray-900 hover:text-white transition-all ease-in-out duration-200"
+                href="mailto:elierobin85430@gmail.com"
+              >
+                <svg
+                  class="group-hover:fill-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="Outline"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M19,1H5A5.006,5.006,0,0,0,0,6V18a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V6A5.006,5.006,0,0,0,19,1ZM5,3H19a3,3,0,0,1,2.78,1.887l-7.658,7.659a3.007,3.007,0,0,1-4.244,0L2.22,4.887A3,3,0,0,1,5,3ZM19,21H5a3,3,0,0,1-3-3V7.5L8.464,13.96a5.007,5.007,0,0,0,7.072,0L22,7.5V18A3,3,0,0,1,19,21Z"
+                  ></path>
+                </svg>
+                elierobin@icloud.com
+              </a>
+            </li>
+            <li class="w-1/2 rounded-md border border-gray-200">
+              <a
+                class="group flex flex-col gap-3 items-center py-8 px-4 rounded-md border-1 hover:bg-gray-900 hover:text-white transition-all ease-in-out duration-200"
+                href="tel:0640824335"
+              >
+                <svg
+                  class="group-hover:fill-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="Layer_1"
+                  data-name="Layer 1"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M22.17,1.82l-1.05-.91c-1.21-1.21-3.17-1.21-4.38,0-.03,.03-1.88,2.44-1.88,2.44-1.14,1.2-1.14,3.09,0,4.28l1.16,1.46c-1.46,3.31-3.73,5.59-6.93,6.95l-1.46-1.17c-1.19-1.15-3.09-1.15-4.28,0,0,0-2.41,1.85-2.44,1.88-1.21,1.21-1.21,3.17-.05,4.33l1,1.15c1.15,1.15,2.7,1.78,4.38,1.78,7.64,0,17.76-10.13,17.76-17.76,0-1.67-.63-3.23-1.83-4.42ZM6.24,22c-1.14,0-2.19-.42-2.91-1.15l-1-1.15c-.41-.41-.43-1.08-.04-1.51,0,0,2.39-1.84,2.42-1.87,.41-.41,1.13-.41,1.55,0,.03,.03,2.04,1.64,2.04,1.64,.28,.22,.65,.28,.98,.15,4.14-1.58,7.11-4.54,8.82-8.81,.13-.33,.08-.71-.15-1,0,0-1.61-2.02-1.63-2.04-.43-.43-.43-1.12,0-1.55,.03-.03,1.87-2.42,1.87-2.42,.43-.39,1.1-.38,1.56,.08l1.05,.91c.77,.77,1.2,1.82,1.2,2.96,0,6.96-9.77,15.76-15.76,15.76Z"
+                  ></path>
+                </svg>
+                06 40 82 43 35
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <style>
+        #contact:target {
+          display: flex;
+          opacity: 1;
+        }
+      
+        #contact {
+          display: none;
+        }
+      </style>
+      
     </div>
   </nav>
 </header>

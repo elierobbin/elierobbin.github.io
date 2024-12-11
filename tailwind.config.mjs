@@ -5,6 +5,7 @@ export default {
 		extend: {
 			backgroundColor: {
 				'background': '#f2f0df',
+				'black-50': 'rgba(0, 0, 0, 0.75)',
 			},
 		},
 	},

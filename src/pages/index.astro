@@ -6,8 +6,6 @@ import Contact from "../components/Contact.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const posts = (await getCollection("blog"))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 2);
 ---
 
 <BaseLayout>
@@ -17,7 +15,7 @@ const posts = (await getCollection("blog"))
     >
       <div class="flex flex-col gap-5">
         <h2 class="text-2xl w-full text-left text-gray-700">I'm Elie !</h2>
-        <h1 class="anim text-6xl text-gray-700">
+        <h1 class="text-6xl text-gray-700">
           Concevoir des
           <span class="italic text-green-900">interfaces digitales</span>
           centrées sur le visuel.
@@ -38,7 +36,6 @@ const posts = (await getCollection("blog"))
               image={post.data.heroImage}
               title={post.data.title}
               description={post.data.description}
-              logiciel={post.data.logiciel}
             />
           </li>
         ))
