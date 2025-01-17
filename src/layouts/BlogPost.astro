@@ -7,13 +7,23 @@ type Props = CollectionEntry<"blog">["data"];
 const { title, description, heroImage } = Astro.props;
 ---
 
+<!-- PAGE POUR STYLISER LA PAGE PROJET -->
+
 <BaseLayout>
   <main>
     <article class="flex flex-col items-start gap-4">
       <h1>{title}</h1>
       <p>{description}</p>
-      <img 'src={heroImage}' alt="Photo du projet"/>
-
+      <div class="flex gap-2 w-full overflow-x-auto overflow-hidden">
+        {heroImage.map((image, index) => (
+          <img 
+            key={index}
+            class="h-[500px] w-auto"
+            src={image}
+          />
+        ))}
+      </div>
+      
       <div class="prose">
         <slot />
       </div>

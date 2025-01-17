@@ -9,8 +9,8 @@ const tags = [...new Set(posts.map((post: any) => post.data.tags).flat())];
 ---
 
 <BaseLayout>
-  <main>
-    <section class="flex gap-4">
+  <main class="flex flex-col gap-4">
+    <section class="flex gap-2 flex-wrap items-center">
       {
         tags.map((tag: string) => (
           <li class="list-none">
@@ -24,17 +24,17 @@ const tags = [...new Set(posts.map((post: any) => post.data.tags).flat())];
         ))
       }
     </section>
-  </main>
-  {
-    posts.map((post) => (
-      <li class="list-none">
+    {
+      posts.map((post) => (
+        <li class="list-none">
         <Card
           url={`/blog/${post.slug}/`}
           image={post.data.heroImage}
           title={post.data.title}
           description={post.data.description}
-        />
+          />
       </li>
     ))
   }
+  </main>
 </BaseLayout>

@@ -10,30 +10,14 @@ const posts = (await getCollection("blog"))
 
 <BaseLayout>
 
-    <section
-      class="flex flex-col sm:m-auto justify-center items-left gap-32 py-20"
-    >
-      <div class="flex flex-col gap-5">
-        <h2 class="text-2xl w-full text-left text-gray-700">I'm Elie !</h2>
-        <h1 class="text-6xl text-gray-700">
-          Concevoir des
-          <span class="italic text-green-900">interfaces digitales</span>
-          centrées sur le visuel.
-        </h1>
-      </div>
-      <div class="w-full flex justify-center items-center">
-        <button class="px-12 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-900 transition-all duration-300 ease-in-out">
-          Échanger avec moi !
-        </button>
-      </div>
-    </section>
+    
     <ul>
       {
         posts.map((post) => (
           <li>
             <Card
               url={`/blog/${post.slug}/`}
-              image={post.data.heroImage}
+              coverImage={post.data.coverImage}
               title={post.data.title}
               description={post.data.description}
             />
