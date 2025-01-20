@@ -138,36 +138,16 @@ hr {
   .fade-in {
 	animation: fadeIn 1.5s ease-out;
   }
-  
 
-
-  /* ANIMATION NAVBAR */
-
-@keyframes fadeInFromTop {
-	0% {
-	  opacity: 0;
-	  transform: translateY(-100%); 
-	}
-	100% {
-	  opacity: 1;
-	  transform: translateY(0); 
-	}
-  }
-  
-  .navbar-fade-in {
-	animation: fadeInFromTop 1s ease-out;
-  }
-  
 
 
   /* ANIMATION DOMAINE D'EXPERTISE */
 
-/* Cache les éléments au début */
 li {
 	opacity: 0;
 	visibility: hidden;
-	transform: translateY(20px); /* Décale légèrement les éléments vers le bas */
-	transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition fluide */
+	transform: translateY(20px); 
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
   }
   
   /* Animation fadeIn */
@@ -175,16 +155,15 @@ li {
 	0% {
 	  opacity: 0;
 	  visibility: hidden;
-	  transform: translateY(20px); /* Démarre légèrement en bas */
+	  transform: translateY(20px); 
 	}
 	100% {
 	  opacity: 1;
 	  visibility: visible;
-	  transform: translateY(0); /* Finie à sa position normale */
+	  transform: translateY(0); 
 	}
   }
   
-  /* Classe pour déclencher l'animation */
   .fade-in {
 	opacity: 1;
 	visibility: visible;
