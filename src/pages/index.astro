@@ -1,8 +1,6 @@
 ---
 import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
-import Contact from "../components/Contact.astro";
-
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const posts = (await getCollection("blog"))
@@ -11,7 +9,12 @@ const posts = (await getCollection("blog"))
 <BaseLayout>
 
     <main class="responsive">
-      <p class="font-medium text-5xl leading-[4rem]">Salut, je suis <span class="mark">Élie</span>, étudiant en webdesign. J’aime créer des expériences numériques qui allient simplicité et efficacité. Curieux et motivé, je profite de chaque projet pour apprendre et progresser.</p>
+      <p class="font-medium text-5xl mt-32 leading-[4rem] fade-in">
+        Salut, je suis <span class="mark">Élie</span>, étudiant en webdesign. 
+        J’aime créer des expériences numériques qui allient simplicité et efficacité. 
+        Curieux et motivé, je profite de chaque projet pour apprendre et progresser.
+      </p>
+      
 
       <section class="section">
         <h2 class="subtitle">
@@ -32,9 +35,172 @@ const posts = (await getCollection("blog"))
             ))
           }
       </section>
+
+      <section class="section">
+        <h2 class="subtitle">
+          Domaine d'expertise
+        </h2>
+
+        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <li class="p-6 flex flex-col gap-6 card rounded-xl relative overflow-hidden">
+            <img class="w-10 h-10" src="public/icons/pinceau.svg" alt="graphisme">
+            <div class="flex flex-col">
+              <h3 class="font-semibold">Graphisme & Design</h3>
+              <p class="font-light poppins">Création de visuels et maquettes avec Photoshop, en appliquant les principes de composition, couleur et typographie pour des supports web et print.</p>
+            </div>
+          </li>
+        
+          <li class="p-6 flex flex-col gap-6 card rounded-xl relative overflow-hidden">
+            <img class="w-10 h-10" src="public/icons/communication.svg" alt="communication">
+            <div class="flex flex-col">
+              <h3 class="font-semibold">Communication Digitale</h3>
+              <p class="font-light poppins">Développement de stratégies digitales et création de contenus pour optimiser la visibilité et l'engagement sur les réseaux sociaux.</p>
+            </div>
+          </li>
+        
+          <li class="p-6 flex flex-col gap-6 card rounded-xl relative overflow-hidden">
+            <img class="w-10 h-10" src="public/icons/ui.svg" alt="UI/UX Design">
+            <div class="flex flex-col">
+              <h3 class="font-semibold">UX/UI Design</h3>
+              <p class="font-light poppins">Conception d'interfaces intuitives et esthétiques, avec un focus sur l'expérience utilisateur (UX) et la création de prototypes fonctionnels.</p>
+            </div>
+          </li>
+        
+          <li class="p-6 flex flex-col gap-6 card rounded-xl relative overflow-hidden">
+            <img class="w-10 h-10" src="public/icons/code.svg" alt="Développement Web">
+            <div class="flex flex-col">
+              <h3 class="font-semibold">Développement Web</h3>
+              <p class="font-light poppins">Intégration de sites web responsives avec HTML, CSS, JavaScript et React, en optimisant la performance et l'interactivité des interfaces.</p>
+            </div>
+          </li>
+        </ul>
+        
+        
+        <script>
+          // Créer un nouvel observer
+          const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in"); // Ajoute la classe fade-in
+                observer.unobserve(entry.target); // Arrête d'observer cet élément une fois qu'il est visible
+              }
+            });
+          }, { threshold: 0.5 }); // Déclenche lorsque 50% de l'élément est visible
+        
+          // Cibler tous les éléments <li> à observer
+          const items = document.querySelectorAll("ul li");
+          items.forEach((item) => {
+            observer.observe(item); // Observer chaque élément <li>
+          });
+        </script>
+        
+        
+        
+      </section>
+      
+      <section class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+        <!-- Section Contact -->
+        <section class="section sm:col-span-1">
+          <h2 class="subtitle">Contact</h2>
+          <hr class="mt-2 mb-6" />
+          <ul class="flex flex-col gap-6">
+            <li class="contact flex items-center gap-3 cursor-pointer">
+              <img class="w-8 h-8" src="public/icons/linkedin.svg" alt="linkedin">
+              <span class="gray-text font-medium">Linkedin</span>
+            </li>
+            <li class="contact flex items-center gap-3 cursor-pointer">
+              <img class="w-8 h-8" src="public/icons/instagram.svg" alt="instagram">
+              <span class="gray-text font-medium">Instagram</span>
+            </li>
+            <li class="contact flex items-center gap-3 cursor-pointer">
+              <img class="w-8 h-8" src="public/icons/telephone.svg" alt="telephone">
+              <span class="gray-text font-medium">06 40 82 43 35</span>
+            </li>
+            <hr />
+            <li class="contact flex items-center gap-3 cursor-pointer">
+              <img class="w-8 h-8" src="public/icons/mail.svg" alt="mail">
+              <span class="gray-text font-medium">elierobin@icloud.com</span>
+            </li>
+          </ul>
+        </section>
+      
+        <!-- Section Ma caisse à outils -->
+        <section class="section sm:col-span-1 flex flex-col">
+          <h2 class="subtitle">Ma caisse à outils</h2>
+          <hr class="mt-2 mb-6" />
+          <ul class="grid grid-cols-6 sm:grid-cols-5 gap-4 pb-6">
+            <li><img class="w-8 h-8" src="public/logiciels/html.svg" alt="HTML"></li>
+            <li><img class="w-8 h-8" src="public/logiciels/css.svg" alt="CSS"></li>
+            <li><img class="w-8 h-8" src="public/logiciels/JS.svg" alt="JS"></li>
+            <li><img class="w-8 h-8" src="public/logiciels/react.svg" alt="React"></li>
+            <li><img class="w-8 h-8" src="public/logiciels/tailwind.svg" alt="Tailwind"></li>
+            <li><img class="w-8 h-8" src="public/logiciels/wordpress.svg" alt="WordPress"></li>
+          </ul>
+          <hr />
+          <ul class="grid grid-cols-6 sm:grid-cols-5 gap-4 py-6">
+            <li><img class="w-8 h-8" src="public/logiciels/figma.svg" alt="Figma"></li>
+            <li><img class="w-8 h-8" src="public/logiciels/psd.svg" alt="Photoshop"></li>
+            <li><img class="w-8 h-8" src="public/logiciels/illustrator.svg" alt="Illustrator"></li>
+            <li><img class="w-8 h-8" src="public/logiciels/premierpro.svg" alt="Premier Pro"></li>
+            <li><img class="w-8 h-8" src="public/logiciels/aftereffects.svg" alt="After Effects"></li>
+          </ul>
+        </section>
+      
+        <!-- Section Maps -->
+        <section class="flex flex-col sm:flex-row maps sm:col-span-2 relative">
+          <!-- Image de Vendée (affichée par défaut) -->
+          <img 
+            id="vendee-image" 
+            class="object-cover w-full transition-opacity duration-300 opacity-100" 
+            src="public/assets/vendee.png" 
+            alt="Vendée">
+          <!-- Image de Limoges (cachée par défaut) -->
+          <img 
+            id="limoges-image" 
+            class="object-cover w-full transition-opacity duration-300 opacity-0 scale-110 absolute top-0 left-0" 
+            src="public/assets/limoges.png" 
+            alt="Limoges">
+          <img class="w-24 h-24 absolute left-[164px] bottom-[110px]" src="public/assets/Bitmoji.png" alt="bitmoji">
+          <!-- Boutons -->
+          <div class="flex gap-2 absolute right-4 bottom-4">
+            <button 
+              id="btn-lmg" 
+              class="px-2 py-1 text-sm rounded bg-white text-black hover:bg-gray-200">LMG</button>
+            <button 
+              id="btn-lrsy" 
+              class="px-2 py-1 text-sm rounded bg-white text-black hover:bg-gray-200">LRSY</button>
+          </div>
+        </section>
+        
+        <script>
+          // Récupération des éléments
+          const limogesImage = document.getElementById('limoges-image');
+          const vendeeImage = document.getElementById('vendee-image');
+          const btnLmg = document.getElementById('btn-lmg');
+          const btnLrsy = document.getElementById('btn-lrsy');
+        
+          // Fonction pour afficher l'image de Limoges
+          btnLmg.addEventListener('click', () => {
+            limogesImage.classList.remove('opacity-0');
+            limogesImage.classList.add('opacity-100');
+            vendeeImage.classList.remove('opacity-100');
+            vendeeImage.classList.add('opacity-0');
+          });
+        
+          // Fonction pour afficher l'image de Vendée
+          btnLrsy.addEventListener('click', () => {
+            vendeeImage.classList.remove('opacity-0');
+            vendeeImage.classList.add('opacity-100');
+            limogesImage.classList.remove('opacity-100');
+            limogesImage.classList.add('opacity-0');
+          });
+        </script>
+        
+      </section>
+      
+      
       
     </main>
-    <Contact />
     
 </BaseLayout>
 

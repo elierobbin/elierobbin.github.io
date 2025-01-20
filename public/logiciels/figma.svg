@@ -1,0 +1,14 @@
+<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="figma" clip-path="url(#clip0_240_137)">
+<path id="Vector" d="M11.375 32.5C14.35 32.5 16.75 30.1 16.75 27.125V21.75H11.375C8.4 21.75 6 24.15 6 27.125C6 30.1 8.4 32.5 11.375 32.5Z" fill="#0ACF83"/>
+<path id="Vector_2" d="M6 16.375C6 13.4 8.4 11 11.375 11H16.75V21.75H11.375C8.4 21.75 6 19.35 6 16.375Z" fill="#A259FF"/>
+<path id="Vector_3" d="M6 5.625C6 2.65 8.4 0.25 11.375 0.25H16.75V11H11.375C8.4 11 6 8.6 6 5.625Z" fill="#F24E1E"/>
+<path id="Vector_4" d="M16.75 0.25H22.125C25.1 0.25 27.5 2.65 27.5 5.625C27.5 8.6 25.1 11 22.125 11H16.75V0.25Z" fill="#FF7262"/>
+<path id="Vector_5" d="M27.5 16.375C27.5 19.35 25.1 21.75 22.125 21.75C19.15 21.75 16.75 19.35 16.75 16.375C16.75 13.4 19.15 11 22.125 11C25.1 11 27.5 13.4 27.5 16.375Z" fill="#1ABCFE"/>
+</g>
+<defs>
+<clipPath id="clip0_240_137">
+<rect width="32" height="32" fill="white" transform="translate(0 0.25)"/>
+</clipPath>
+</defs>
+</svg>

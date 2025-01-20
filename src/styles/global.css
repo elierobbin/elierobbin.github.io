@@ -13,12 +13,13 @@
 }
 
 body {
-	font-family: "Syne", serif;
-	background-color: var(--background);
-	color: var(--text);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-top: 2rem !important;
+	font-family: "Syne", serif;
+	background-color: var(--background);
+	color: var(--text);
 }
 
 .mark {
@@ -42,6 +43,10 @@ body {
 	box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.25);
 }
 
+.bg-section {
+	background-color: var(--section-bg);
+}
+
 /* CARD */
 
 .card {
@@ -56,11 +61,133 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+.responsive {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+}
+
 @media (min-width: 1140px) {
 	.responsive {
 		width: 1080px;
 		display: flex;
 		flex-direction: column;
 		gap: 8rem;
-	}	
+	}
 }
+
+
+/*  NAVBAR RESPONSVIE  */
+
+.navbar {
+	padding: 1rem 1.5rem;
+	box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.25);
+}
+
+
+
+/* CONTACT */
+
+.gray-text {
+	color: var(--gray-text);
+	transition: color 0.3s ease;
+}
+
+.contact img {
+	transition: filter 0.3s ease;
+}
+
+.contact:hover span {
+	color: var(--text);
+}
+
+.contact:hover img {
+	filter: brightness(0) invert(1);
+}
+
+hr {
+	height: 1px;
+	border-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* MAPS */
+
+.maps {
+	box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.25);
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+
+
+
+/* ANIMATION TEXTE  */
+
+@keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  .fade-in {
+	animation: fadeIn 1.5s ease-out;
+  }
+  
+
+
+  /* ANIMATION NAVBAR */
+
+@keyframes fadeInFromTop {
+	0% {
+	  opacity: 0;
+	  transform: translateY(-100%); 
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(0); 
+	}
+  }
+  
+  .navbar-fade-in {
+	animation: fadeInFromTop 1s ease-out;
+  }
+  
+
+
+  /* ANIMATION DOMAINE D'EXPERTISE */
+
+/* Cache les éléments au début */
+li {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(20px); /* Décale légèrement les éléments vers le bas */
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition fluide */
+  }
+  
+  /* Animation fadeIn */
+  @keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	  visibility: hidden;
+	  transform: translateY(20px); /* Démarre légèrement en bas */
+	}
+	100% {
+	  opacity: 1;
+	  visibility: visible;
+	  transform: translateY(0); /* Finie à sa position normale */
+	}
+  }
+  
+  /* Classe pour déclencher l'animation */
+  .fade-in {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+  }
+  
