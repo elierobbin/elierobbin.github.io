@@ -170,3 +170,12 @@ li {
 	transform: translateY(0);
   }
   
+
+  @media (max-width: 1140px) {
+	.responsive-contact {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr); /* 1 colonne par défaut */
+		gap: 1rem; /* Espacement entre les éléments */
+	}
+  }
+
