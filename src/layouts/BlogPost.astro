@@ -17,12 +17,12 @@ const { title, description, heroImage } = Astro.props;
       <div class="flex gap-2 w-full overflow-x-auto overflow-hidden">
         {heroImage.map((image, index) => (
           <img 
-            key={index}
             class="h-[500px] w-auto"
             src={image}
+            alt={`Image ${index + 1}`}
           />
         ))}
-      </div>
+      </div>      
       
       <div class="prose">
         <slot />
