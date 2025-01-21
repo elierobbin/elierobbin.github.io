@@ -4,53 +4,51 @@ const images = [
   { src: "/public/assets/limoges.png", alt: "Limoges" },
 ];
 ---
+
 <script>
-    let currentIndex = 0;
-  
-    // Images du carousel
-    const images = [
-      { src: "/assets/vendee.png", alt: "Vendée" },
-      { src: "/assets/limoges.png", alt: "Limoges" },
-    ];
-  
-    // Fonction pour changer d'image
-    const changeImage = () => {
-      currentIndex = (currentIndex + 1) % images.length;
-      const carousel = document.querySelector(".carousel");
-      if (carousel) {
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-      }
-    };
-  
-    // Lancer le changement automatique
-    setInterval(changeImage, 3000);
-  </script>
-  
-  <style>
-    .carousel-wrapper {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
+  let currentIndex = 0;
+
+  // Images du carousel
+  const images = [
+    { src: "/assets/vendee.png", alt: "Vendée" },
+    { src: "/assets/limoges.png", alt: "Limoges" },
+  ];
+
+  // Fonction pour changer d'image
+  const changeImage = () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    const carousel = document.querySelector(".carousel") as HTMLElement;
+    if (carousel) {
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
-  
-    .carousel {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 200%; /* Ajusté à la somme des images */
-    }
-  
-    .carousel img {
-      width: 100%;
-      flex-shrink: 2;
-      object-fit: cover;
-    }
-  </style>
-  
-  <div class="carousel-wrapper">
-    <div class="carousel">
-      {images.map(image => (
-        <img src={image.src} alt={image.alt} />
-      ))}
-    </div>
+  };
+
+  // Lancer le changement automatique
+  setInterval(changeImage, 3000);
+</script>
+
+<style>
+  .carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%; /* Ajusté à la somme des images */
+  }
+
+  .carousel img {
+    width: 100%;
+    flex-shrink: 2;
+    object-fit: cover;
+  }
+</style>
+
+<div class="carousel-wrapper">
+  <div class="carousel">
+    {images.map((image) => <img src={image.src} alt={image.alt} />)}
   </div>
-  
+</div>
