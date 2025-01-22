@@ -2,6 +2,23 @@
 import HeaderLink from "./HeaderLink.astro";
 import { LOGO_PATH } from "../consts";
 ---
+<style>
+  .modal-enter {
+    transform: translateX(100%);
+  }
+  .modal-enter-active {
+    transform: translateX(0);
+    transition: transform 300ms ease-in-out;
+  }
+  .modal-exit {
+    transform: translateX(0);
+  }
+  .modal-exit-active {
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+  }
+</style>
+
 <nav class="navbar bg-section rounded-2xl flex items-center justify-between max-w-[1080px] w-full mx-auto px-4 sm:px-6 lg:px-8 navbar-fade-in">
   <div class="w-12 h-12 rounded-[100px] bg-none border border-white overflow-hidden flex items-start justify-center">
     <img class="mt-[1px]" src={LOGO_PATH} alt="Logo du site" class="w-10" />
@@ -17,3 +34,42 @@ import { LOGO_PATH } from "../consts";
     <HeaderLink href="/contact">Contact</HeaderLink>
   </div>
 </nav>
+
+<div id="modal" class="fixed inset-0 text-[2rem] hidden bg-black z-10 flex flex-col items-center justify-center">
+  <button id="close-modal" class="absolute top-14 right-10 text-white">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+  <div class="flex flex-col items-center gap-4 uppercase text-white text-center">
+    <HeaderLink href="/">Me concernant</HeaderLink>
+    <HeaderLink href="/blog">Projets</HeaderLink>
+    <HeaderLink href="/contact">Contact</HeaderLink>
+  </div>
+</div>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const modal = document.getElementById('modal');
+  const closeModal = document.getElementById('close-modal');
+
+  if (menuToggle && modal && closeModal) {
+    menuToggle.addEventListener('click', function() {
+      modal.classList.remove('hidden', 'modal-exit', 'modal-exit-active');
+      modal.classList.add('modal-enter');
+      setTimeout(() => {
+        modal.classList.add('modal-enter-active');
+      }, 10); // Slight delay to ensure the transition is applied
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeModal.addEventListener('click', function() {
+      modal.classList.remove('modal-enter', 'modal-enter-active');
+      modal.classList.add('modal-exit', 'modal-exit-active');
+      document.body.style.overflow = 'auto';
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 300);
+    });
+  }
+</script>

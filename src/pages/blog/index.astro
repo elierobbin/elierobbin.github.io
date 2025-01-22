@@ -15,8 +15,8 @@ const tags = [...new Set(posts.map((post: any) => post.data.tags).flat())];
         tags.map((tag: string) => (
           <li class="list-none">
             <a
-              class="border border-black border-1 px-4 py-2 hover:bg-black hover:text-white transition-all ease-in-out duration-200"
-              href={`/blog/tags/${tag}`}
+              class="border border-black border-1 px-4 py-2 hover:bg-black text-white transition-all ease-in-out duration-200"
+              href={`/blog/tags/${tags}`}
             >
               {tag}
             </a>

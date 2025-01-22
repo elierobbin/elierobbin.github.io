@@ -34,7 +34,7 @@ export async function getStaticPaths() {
         {
           tags.map((tag: string) => (
       <li class="list-none">
-            <a class="border border-black border-1 px-4 py-2 hover:bg-black hover:text-white transition-all ease-in-out duration-200" href={`/blog/tags/${tag}`}>
+            <a class="border border-black border-1 px-4 py-2 hover:bg-black text-white transition-all ease-in-out duration-200" href={`/blog/tags/${tag}`}>
               {tag}
             </a>
       </li>

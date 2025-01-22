@@ -2,13 +2,12 @@
 import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 const posts = await getCollection("blog");
 ---
 
 <BaseLayout>
   <main class="responsive">
-    <p class="font-medium text-5xl mt-32 leading-[4rem] fade-in">
+    <p class="font-medium text-5xl leading-[4rem] fade-in">
       Salut, je suis <span class="mark">Élie</span>, étudiant en webdesign.
       J’aime créer des expériences numériques qui allient simplicité et
       efficacité. Curieux et motivé, je profite de chaque projet pour apprendre
