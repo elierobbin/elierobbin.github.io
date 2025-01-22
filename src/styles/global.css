@@ -89,8 +89,12 @@ body {
 /* CONTACT */
 
 .gray-text {
-	color: var(--gray-text);
+	color: var(--text);
 	transition: color 0.3s ease;
+}
+
+.gray-text:hover {
+	color: var(--mark);
 }
 
 .contact img {
