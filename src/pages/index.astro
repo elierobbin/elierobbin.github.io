@@ -16,7 +16,6 @@ const posts = await getCollection("blog");
 
     <section class="section">
       <h2 class="subtitle">Travaux & Projets</h2>
-
       <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {
           posts.map((post) => (
@@ -246,7 +245,7 @@ const posts = await getCollection("blog");
           </li>
         </ul>
       </section>
-
+      
       <script>
         document.addEventListener("DOMContentLoaded", () => {
           const limogesImage = document.getElementById("limoges-image");
@@ -273,7 +272,6 @@ const posts = await getCollection("blog");
           }
         });
       </script>
-      
 
       <!-- Section Maps -->
       <section class="flex flex-col sm:flex-row maps sm:col-span-2 relative">

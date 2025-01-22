@@ -51,6 +51,7 @@ body {
 
 .card {
 	background-color: var(--card-bg);
+	transition: ease-in .15s;
 }
 
 .category {

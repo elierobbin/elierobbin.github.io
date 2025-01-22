@@ -2,22 +2,6 @@
 import HeaderLink from "./HeaderLink.astro";
 import { LOGO_PATH } from "../consts";
 ---
-<style>
-  .modal-enter {
-    transform: translateX(100%);
-  }
-  .modal-enter-active {
-    transform: translateX(0);
-    transition: transform 300ms ease-in-out;
-  }
-  .modal-exit {
-    transform: translateX(0);
-  }
-  .modal-exit-active {
-    transform: translateX(100%);
-    transition: transform 300ms ease-in-out;
-  }
-</style>
 
 <nav class="navbar bg-section rounded-2xl flex items-center justify-between max-w-[1080px] w-full mx-auto px-4 sm:px-6 lg:px-8 navbar-fade-in">
   <div class="w-12 h-12 rounded-[100px] bg-none border border-white overflow-hidden flex items-start justify-center">
@@ -31,7 +15,6 @@ import { LOGO_PATH } from "../consts";
   <div id="menu" class="hidden sm:flex gap-4 sm:gap-8 text-white">
     <HeaderLink href="/">Me concernant</HeaderLink>
     <HeaderLink href="/blog">Projets</HeaderLink>
-    <HeaderLink href="/contact">Contact</HeaderLink>
   </div>
 </nav>
 
@@ -44,7 +27,6 @@ import { LOGO_PATH } from "../consts";
   <div class="flex flex-col items-center gap-4 uppercase text-white text-center">
     <HeaderLink href="/">Me concernant</HeaderLink>
     <HeaderLink href="/blog">Projets</HeaderLink>
-    <HeaderLink href="/contact">Contact</HeaderLink>
   </div>
 </div>
 
@@ -73,3 +55,21 @@ import { LOGO_PATH } from "../consts";
     });
   }
 </script>
+
+
+<style>
+  .modal-enter {
+    transform: translateX(100%);
+  }
+  .modal-enter-active {
+    transform: translateX(0);
+    transition: transform 300ms ease-in-out;
+  }
+  .modal-exit {
+    transform: translateX(0);
+  }
+  .modal-exit-active {
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+  }
+</style>
