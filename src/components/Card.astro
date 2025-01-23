@@ -1,11 +1,17 @@
 ---
-const {url, coverImage, title, tag, pubDate} = Astro.props;
+interface CardProps {
+  url: string;
+  coverImage: string;
+  title: string;
+  tag: string[]; // Spécifie que 'tag' est un tableau de chaînes
+  pubDate: string;
+}
+
+const { url, coverImage, title, tag, pubDate } = Astro.props as CardProps;
 ---
 
 <a href={url}>
-  <section
-    class="card poppins flex flex-col px-3 py-4 gap-4 rounded-xl"
-  >
+  <section class="card poppins flex flex-col px-3 py-4 gap-4 rounded-xl">
     <img
       src={coverImage}
       class="w-full aspect-video object-cover rounded-lg"
@@ -16,7 +22,13 @@ const {url, coverImage, title, tag, pubDate} = Astro.props;
         <h1 class="">{title}</h1>
         <p class="font-extralight">{pubDate}</p>
       </section>
-      <span class="category text-[14px]">{tag}</span>
+      <section class="flex gap-2">
+        {tag.map((item: string) => (
+          <span class="px-2 py-1 w-fit rounded-lg bg-white text-black text-[14px]">
+            {item}
+          </span>
+        ))}
+      </section>
     </section>
   </section>
 </a>
