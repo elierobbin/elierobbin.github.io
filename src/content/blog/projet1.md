@@ -1,79 +1,25 @@
 ---
-tags: ['UX-UI', 'Développement']
-coverImage: /assets/projet1/header2.jpg
-title: "Titre du Projet"
-description: "Courte description résumant le projet et son objectif principal."
-pubDate: 'Dec 12 2024'
+coverImage: /assets/wifidi/coverWifidi.jpg
+title: "Landing Page"
+tag: "UX"
+description: "La vie à 500 mètres de chez vous est un miroir de la société, mêlant richesses et défis : des lieux essentiels (écoles, commerces, parcs), des individus uniques (papi conteur, dame nourrissant les chats) et des dynamiques sociales (rencontres, traditions). Cet espace peut être vivant et inspirant, ou parfois marqué par l’indifférence et le vide. Il regorge d’opportunités pour améliorer la qualité de vie grâce à des initiatives locales, des projets citoyens, et des collaborations qui renforcent le lien social, dynamisent l’économie et valorisent la culture."
+pubDate: 'Dec 18 2024'
 heroImage:
-    - /assets/projet1/header2.jpg
-    - /assets/projet1/header2.jpg
-    - /assets/projet1/header2.jpg
-    - /assets/projet1/header2.jpg
-    - /assets/projet1/header2.jpg
-    - /assets/projet1/header2.jpg
+    - /assets/wifidi/coverWifidi.jpg
+    - /assets/wifidi/coverWifidi.jpg
+    - /assets/wifidi/coverWifidi.jpg
+    - /assets/wifidi/coverWifidi.jpg
 
 contexte: "Nom du client ou type de projet (fictif-réel), problématique ou besoin initial et les objectifs de ce projet"
-
-logiciels:
-    - /logiciels/figma.png
-    - /logiciels/figma.png
 ---
 
-## Contexte et Objectifs  
-**Client/Entreprise** : Nom du client ou type de projet (fictif ou réel).  
-**Contexte** : Présentation de la problématique ou du besoin initial.  
-**Objectifs** : Résumer les attentes (exemple : améliorer l’expérience utilisateur, moderniser le design, etc.).  
+# Landing Page
 
----
+![Hero Image](/assets/wifidi/coverWifidi.jpg)
 
-## Processus de Travail  
+## Contexte
+Nom du client ou type de projet (fictif-réel), problématique ou besoin initial et les objectifs de ce projet.
 
-### Recherche et Analyse  
-- Étude des besoins utilisateurs.  
-- Réalisation d’un benchmark des concurrents ou d’inspirations similaires.  
+## Description
 
-### Conception  
-- Création de wireframes avec [nom du logiciel].  
-- Réalisation des maquettes haute-fidélité en [Figma/Photoshop/Autre].  
-- Développement des prototypes interactifs pour validation.
-
-### Itérations  
-- Intégration des retours clients ou résultats des tests utilisateurs.  
-
-## Réalisations  
-
-### Design  
-- Présentation visuelle des principales maquettes ou pages (ajoutez ici une capture d'écran ou un lien).  
-
-![Aperçu du design](/assets/projet/design1.jpg)  
-
-- **Détails techniques** :  
-  - Palette de couleurs utilisée : `#123456, #abcdef`.  
-  - Typographie : "Roboto", "Montserrat".  
-  - Structure responsive pour desktop, tablette et mobile.  
-
-### Intégration  
-- Utilisation de [HTML, Tailwind CSS, React, etc.].  
-- Focus sur la performance et l’accessibilité (si pertinent).  
-- Adaptation mobile-first.  
-
-## Résultats et Impact  
-
-- **Livrables** : Design complet, prototype interactif, site en ligne.  
-- **Impact mesurable** (si applicable) :  
-  - Amélioration du taux de conversion de X%.  
-  - Feedback positif des utilisateurs/clients : "Citation ou résumé du retour".  
-
-## Mon Rôle  
-- **Rôle spécifique** : Précisez vos tâches (UI/UX Designer, intégrateur, chef de projet).  
-- **Outils utilisés** : Listez les logiciels et frameworks employés.  
-
-## Challenges et Apprentissages  
-- Décrivez un défi majeur rencontré et comment il a été résolu.  
-- Mentionnez les compétences acquises ou perfectionnées durant le projet.  
-
-## Liens et Ressources  
-- [Lien vers le site/prototype en ligne](#).  
-- [Télécharger un fichier ou rapport](#).  
-
-![Autre visuel ou capture d'écran](/assets/projet/preview2.jpg)
+La vie à 500 mètres de chez vous est un miroir de la société, mêlant richesses et défis : des lieux essentiels (écoles, commerces, parcs), des individus uniques (papi conteur, dame nourrissant les chats) et des dynamiques sociales (rencontres, traditions). Cet espace peut être vivant et inspirant, ou parfois marqué par l’indifférence et le vide. Il regorge d’opportunités pour améliorer la qualité de vie grâce à des initiatives locales, des projets citoyens, et des collaborations qui renforcent le lien social, dynamisent l’économie et valorisent la culture.

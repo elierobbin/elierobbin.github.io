@@ -1,5 +1,5 @@
 ---
-const { coverImage, title, pubDate, url } = Astro.props;
+const {url, coverImage, title, tag, pubDate} = Astro.props;
 ---
 
 <a href={url}>
@@ -16,7 +16,7 @@ const { coverImage, title, pubDate, url } = Astro.props;
         <h1 class="">{title}</h1>
         <p class="font-extralight">{pubDate}</p>
       </section>
-      <span class="category text-[14px]">Product Design</span>
+      <span class="category text-[14px]">{tag}</span>
     </section>
   </section>
 </a>

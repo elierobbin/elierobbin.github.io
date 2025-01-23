@@ -32,6 +32,7 @@ const tags = [...new Set(posts.map((post: any) => post.data.tags).flat())];
           url={`/blog/${post.slug}/`}
           image={post.data.heroImage}
           title={post.data.title}
+          tag={post.data.tag}
           description={post.data.description}
           />
       </li>

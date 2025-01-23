@@ -6,10 +6,10 @@ export const collections = {
     schema: z.object({
       coverImage: z.string(),
       title: z.string(),
+      tag: z.string(),
       description: z.string(),
       pubDate: z.string(),
       heroImage: z.array(z.string()), 
-      tags: z.array(z.string()), //Array permet de stocker plusieurs valeurs
     }),
   }),
 };

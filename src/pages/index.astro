@@ -24,6 +24,7 @@ const posts = await getCollection("blog");
                 url={`/blog/${post.slug}/`}
                 coverImage={post.data.coverImage}
                 title={post.data.title}
+                tag={post.data.tag}
                 pubDate={post.data.pubDate}
               />
             </li>
