@@ -38,18 +38,18 @@ const posts = await getCollection("blog");
           (entries, observer) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
-                entry.target.classList.add("fade-in"); // Ajoute la classe fade-in
-                observer.unobserve(entry.target); // Arrête d'observer cet élément une fois qu'il est visible
+                entry.target.classList.add("fade-in");
+                observer.unobserve(entry.target); 
               }
             });
           },
           { threshold: 0.5 }
-        ); // Déclenche lorsque 50% de l'élément est visible
+        );
 
         // Cibler tous les éléments <li> à observer
         const items = document.querySelectorAll("ul li");
         items.forEach((item) => {
-          observer.observe(item); // Observer chaque élément <li>
+          observer.observe(item);
         });
       </script>
 
