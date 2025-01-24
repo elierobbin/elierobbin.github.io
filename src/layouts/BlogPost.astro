@@ -12,12 +12,12 @@ const { title, description, heroImage } = Astro.props;
 <BaseLayout>
   <main class="responsive">
     <article class="flex flex-col items-start gap-4">
-      <h1>{title}</h1>
+      <h1 class="text-3xl">{title}</h1>
       <p>{description}</p>
       <div class="flex gap-2 w-full overflow-x-auto overflow-hidden">
         {heroImage.map((image, index) => (
           <img 
-            class="h-[500px] w-auto"
+            class="h-[500px] object-cover w-auto"
             src={image}
             alt={`Image ${index + 1}`}
           />
