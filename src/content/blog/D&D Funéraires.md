@@ -9,5 +9,5 @@ L’entreprise souhaitait moderniser l’image des obsèques en s’éloignant d
 Compte tenu du temps imparti, l’accent a été mis sur l’UI afin d’assurer une cohérence visuelle et une esthétique engageante. Bien que l’aspect UX n’ait pas fait l’objet d’une étude approfondie, l’objectif était d’offrir une navigation fluide et rassurante, en phase avec la volonté de l’entreprise de renouveler l’approche du secteur funéraire."
 pubDate: 'Dec 18 2024'
 heroImage:
-    - /assets/wifidi/coverWifidi.jpg
+    - /assets/d&dfuneraire/maquette.jpg
 ---
