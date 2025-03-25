@@ -1,5 +1,5 @@
 ---
-coverImage: /assets/d&dfuneraire/maquette.jpg
+coverImage: /assets/d&dfuneraire/cover.jpg
 title: "D&D Funéraires"
 tag: ["UI"]
 description: "Durant ma période en entreprise, j'ai conçu une maquette pour D&D Funéraires, une entreprise de pompes funèbres située à Ars-en-Ré, sur l’Île-de-Ré. L’objectif était de proposer une identité visuelle en accord avec l’environnement local, en intégrant des couleurs évocatrices : un bleu marine rappelant l’océan et un beige taupé inspiré du sable.  
