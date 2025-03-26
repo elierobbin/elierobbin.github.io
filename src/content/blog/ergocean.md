@@ -9,9 +9,10 @@ heroImage:
 ---
 
 <iframe 
+    class="w-full h-fit"
     style="border: none;" 
     width="100%" 
     height="600px" 
     src="https://www.figma.com/embed?embed_host=figma&url=https://www.figma.com/proto/CToroNkWDs935W5eAulJqZ/ERGOCEAN?page-id=93%3A1229&node-id=93-1357&viewport=678%2C178%2C0.14&t=y72POssiEjyqbOA1-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=93%3A1357&show-proto-sidebar=1" 
     allowfullscreen>
-</iframe>
+</iframe>   
