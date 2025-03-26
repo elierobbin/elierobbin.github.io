@@ -20,7 +20,7 @@ const { url, coverImage, title, tag, pubDate } = Astro.props as CardProps;
     <section class="flex flex-col gap-4">
       <section class="flex justify-between">
         <h1 class="">{title}</h1>
-        <p class="font-extralight">{pubDate}</p>
+        <p class="text-right font-extralight">{pubDate}</p>
       </section>
       <section class="flex gap-2">
         {tag.map((item: string) => (
