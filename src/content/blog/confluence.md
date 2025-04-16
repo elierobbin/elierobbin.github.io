@@ -8,4 +8,4 @@ heroImage:
     - /assets/confluence/Maquette.jpg
 ---
 
-<a style="padding: 1rem; background-color: white; color: black;" href="www.confluence-arh.fr">Site internet de Confluence | Accompagnement RH</a>
+<a style="margin-top: 1rem; border-radius: 8px; padding: 1rem; background-color: white; color: black;" href="www.confluence-arh.fr">Site internet de Confluence | Accompagnement RH</a>
